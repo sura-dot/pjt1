@@ -1,3 +1,5 @@
+import ConsultForm from "./ConsultForm";
+
 export default function Home() {
   const services = [
     {
@@ -217,6 +219,8 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <ConsultForm />
       </div>
 
       {/* Footer */}
