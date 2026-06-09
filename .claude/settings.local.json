@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Start-Sleep -Seconds 5; Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing | Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(cd \"C:\\\\Users\\\\seula\\\\dev\\\\pjt1\"; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"npm run dev\" -WindowStyle Normal)",
+      "PowerShell(Start-Sleep -Seconds 8; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10; \"Status: $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })",
+      "PowerShell(Start-Sleep -Seconds 10; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 15; \"Status: $\\($r.StatusCode\\); Length: $\\($r.Content.Length\\)\" } catch { \"Error: $_\" })",
+      "PowerShell(Receive-Job *)",
+      "PowerShell(Stop-Job *)",
+      "PowerShell(cd \"C:\\\\Users\\\\seula\\\\dev\\\\pjt1\"; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd 'C:\\\\Users\\\\seula\\\\dev\\\\pjt1'; npm run dev\")",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Skill(run)",
+      "PowerShell(cd \"C:\\\\Users\\\\seula\\\\dev\\\\pjt1\"; $job = Start-Job -ScriptBlock { cd \"C:\\\\Users\\\\seula\\\\dev\\\\pjt1\"; npm run dev 2>&1 }; Start-Sleep -Seconds 8; try { Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10 | Out-Null; \"ready\" } catch { \"not ready\" })",
+      "PowerShell(npx playwright install chromium --with-deps 2>&1 | Select-Object -Last 5)",
+      "PowerShell(cd \"C:\\\\Users\\\\seula\\\\dev\\\\pjt1\"; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd 'C:\\\\Users\\\\seula\\\\dev\\\\pjt1'; npm run dev\"; Start-Sleep -Seconds 6; Start-Process \"http://localhost:3000\")",
+      "PowerShell(vercel *)",
+      "PowerShell(gh *)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://github.com/cli/cli/releases/download/v2.71.0/gh_2.71.0_windows_amd64.msi\" -OutFile \"$env:TEMP\\\\gh_installer.msi\" -UseBasicParsing; Write-Host \"Downloaded\")",
+      "PowerShell(Start-Process msiexec -ArgumentList \"/i `\"$env:TEMP\\\\gh_installer.msi`\" /quiet /norestart\" -Wait; Write-Host \"Installed\")",
+      "Bash(findstr /i \"vercel\\\\|deploy\\\\|build\")",
+      "Bash(npx vercel *)"
+    ]
+  }
+}

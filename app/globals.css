@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --reddit-orangered: #FF4500;
+  --reddit-orangered-hover: #E03D00;
+  --reddit-periwinkle: #7193FF;
+  --reddit-blue: #0079D3;
+  --reddit-canvas: #DAE0E6;
+  --reddit-card: #FFFFFF;
+  --reddit-border: #EDEFF1;
+  --reddit-text-primary: #1C1C1C;
+  --reddit-text-secondary: #878A8C;
+  --reddit-text-meta: #878A8C;
+
+  --background: var(--reddit-canvas);
+  --foreground: var(--reddit-text-primary);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: var(--reddit-canvas);
+  color: var(--reddit-text-primary);
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
