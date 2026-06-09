@@ -37,7 +37,7 @@ export default function Home() {
         <span
           style={{ fontFamily: "'IBM Plex Sans', sans-serif", fontWeight: 700, fontSize: 18, color: "var(--reddit-text-primary)" }}
         >
-          법률팀
+          버버법팀
         </span>
         <span
           style={{
@@ -100,7 +100,7 @@ export default function Home() {
                 marginTop: 8,
               }}
             >
-              r/법률팀
+              r/버버법팀
             </h1>
             <p style={{ color: "var(--reddit-text-secondary)", fontSize: 14, marginTop: 4 }}>
               신뢰할 수 있는 법률 전문가 그룹 · Law Company
@@ -230,7 +230,7 @@ export default function Home() {
           color: "var(--reddit-text-meta)",
         }}
       >
-        © 2026 Law Company 법률팀. All rights reserved.
+        © 2026 Law Company 버버법팀. All rights reserved.
       </footer>
     </div>
   );
